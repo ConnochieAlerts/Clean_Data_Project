@@ -1,0 +1,40 @@
+My code book 
+This code book describes the variables, data structure, and processing steps used to create the tidy dataset "tidy_dataset.txt" from the UCI Human Activity Recognition Using Smartphones Dataset.
+
+The script 'run_analysis.R' performs the following key steps:
+1. Merges the training and test datasets.
+2. Extracts only measurements on the mean and standard deviation.
+3. Replaces activity codes with descriptive activity names.
+4. Renames variable names for clarity and consistency.
+5. Creates a second tidy dataset with the average of each measurement for each subject and activity.
+
+Each row in represents a unique Subject and Activity combination. The columns are:
+1. Subject
+o Description: Identifier for the person who performed the activity
+o Type: Integer
+o Range: 1 to 30
+2. Activity
+o Description: Activity performed
+o Type: Categorical (Factor)
+o Possible Values: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
+3. Measurement Variables
+o Description: The average of each mean() or std() measurement from the original dataset.
+o Type: Numeric (continuous)
+o Units: Normalized (unitless)
+o Examples:
+* TimeBodyAccelerometerMeanX
+* TimeBodyAccelerometerMeanY
+* TimeBodyAccelerometerMeanZ
+* TimeBodyAccelerometerStdX
+* FrequencyBodyGyroscopeMeanX
+Note: All measurement variable names have been cleaned for readability:
+o Prefix "t" changed to "Time"
+o Prefix "f" changed to "Frequency"
+o Abbreviations expanded (e.g., "Acc" to "Accelerometer")
+o "mean()" and "std()" renamed to "Mean" and "Std"
+o Special characters like "()" and "-" were removed
+File Output:
+* Name: tidy_dataset.txt
+
+By: 
+ConnochieAlerts 
